@@ -79,6 +79,28 @@ if you simulate now you will see something like this
 
 save
 
+___
+
+go to your VRPawn and select VRPawn(self) component from the components menu
+![image](https://github.com/user-attachments/assets/2fe272eb-5c2d-4398-87e5-55d1ac619433)
+
+add two skeletal mesh components and name them somthing like "XRPhysicsHandRight" and "XRPhysicsHandLeft"
+![image](https://github.com/user-attachments/assets/39df5d22-e82a-4c11-8f07-6cd4a279758a)
+
+select the XRPhysicsHandRight component and in the details menu change the mesh to SKM_MannyXR_right do the same for the left one
+![image](https://github.com/user-attachments/assets/9886225c-59ae-41c7-9c9d-3ca17331345f)
+![image](https://github.com/user-attachments/assets/3dd4b7c2-27b8-4e72-ac43-0ebc0a3a643c)
+
+enable physics for both hands from the details menu
+![image](https://github.com/user-attachments/assets/956830f9-f97f-4e3c-91a6-17f011562a3e)
+
+now you have two hand meshs that will fall on the ground and collid with the invinroment, the next step is tying the physics hands to the tracked hands.
+
+
+
+
+
+
 
 
 
