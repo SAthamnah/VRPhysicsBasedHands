@@ -94,6 +94,9 @@ select the XRPhysicsHandRight component and in the details menu change the mesh 
 enable physics for both hands from the details menu
 ![image](https://github.com/user-attachments/assets/956830f9-f97f-4e3c-91a6-17f011562a3e)
 
+add "set collision enable" to your event graph after "event begin play" for both XRPhysics hands
+![image](https://github.com/user-attachments/assets/aacc8f92-31cd-4285-9516-e7744d1a0eb2)
+
 now you have two hand meshs that will fall on the ground and collid with the invinroment, the next step is tying the physics hands to the tracked hands.
 
 
