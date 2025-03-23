@@ -94,10 +94,98 @@ select the XRPhysicsHandRight component and in the details menu change the mesh 
 enable physics for both hands from the details menu
 ![image](https://github.com/user-attachments/assets/956830f9-f97f-4e3c-91a6-17f011562a3e)
 
-add "set collision enable" to your event graph after "event begin play" for both XRPhysics hands
-![image](https://github.com/user-attachments/assets/aacc8f92-31cd-4285-9516-e7744d1a0eb2)
+drag from after set visbility and add sequens 
+![image](https://github.com/user-attachments/assets/e6b1b4a1-0651-467d-aacd-5aa8a6ef124e)
 
-now you have two hand meshs that will fall on the ground and collid with the invinroment, the next step is tying the physics hands to the tracked hands.
+drag from the sequend input and add a delay of 5 secounds to give the game some time and traking to work and then add physics
+![image](https://github.com/user-attachments/assets/3a884d8a-44f7-4c76-b03e-5a0a1dff074e)
+
+add two get motion controller data functions and set one to left and one to right
+![image](https://github.com/user-attachments/assets/ccf5dfb3-f8e9-48a5-bb8d-e6cca4f8cec0)
+
+drag from motion controller data and select break xrmotioncontrollerdata then add an and boolian function and connect the valid output to it.
+![image](https://github.com/user-attachments/assets/a66ed8d1-e227-4f82-85e7-4c7b5b8a1b86)
+
+add a branch function to the output of the and
+![image](https://github.com/user-attachments/assets/02d80df5-5f75-49e6-b77a-905677836862)
+
+add a new boolian variable and call it PhysicsSet, this will be used to know that the physics has been set and only set the physics ones.
+![image](https://github.com/user-attachments/assets/8a72274e-2d51-47c0-803c-0baaded1bb16)
+
+get the variable and add a branch on its value
+![image](https://github.com/user-attachments/assets/99b954ba-34e0-4673-88bc-be255d50a8e2)
+
+create a new function and call it AddPhysics
+![image](https://github.com/user-attachments/assets/00b89eae-3538-4681-80f4-5e6b90df62d8)
+
+cleck on the function and add three inouts, then name them Hand, Mesh, and TrsckedHand, then set their type to EControllerHand, SkeletalMeshComponent, and PoseableMeshComponent repectfully.
+![image](https://github.com/user-attachments/assets/08c3f2fb-b4e2-4ac5-b9b3-cbc78b598dbb)
+![image](https://github.com/user-attachments/assets/b9575e53-3cf4-418e-baa3-e1ef0ad6ed7e)
+![image](https://github.com/user-attachments/assets/2e3c7c7f-8290-42bc-8ac3-d3fa804474d8)
+
+drag from the three inputs and promote them to local variables, name them as shown bellow
+![image](https://github.com/user-attachments/assets/7c0fb56f-e1d2-4cb6-9a5b-6166eea2d369)
+
+add the following blueprints to get the hand traking state and verify that the tracking is working correctly
+![image](https://github.com/user-attachments/assets/aca39fec-c45e-4b09-814b-77e151a91897)
+
+diable physics temporarly and enable collision on the physics hand
+![image](https://github.com/user-attachments/assets/8a848661-a78e-4931-ba9b-d4fecb21e19d)
+
+move the physics hand to the tracked hand location 
+![image](https://github.com/user-attachments/assets/43250186-a56d-4751-a242-6a21bb8df6de)
+
+loop on every bone in the hand and add a physics constraint
+we start by getting current bone name and skip "None"
+![image](https://github.com/user-attachments/assets/251e4f06-4830-4896-9aac-46102febbb8b)
+
+to attach physics constaints to a poseable mesh you need something to attach the constraint to so we will add collision spheres as cheldren to the bones, the skeletal mesh already has collision capsoles, so nothing has to be done to them.
+drag from the false output of the brach and get the bone transform of the hand mesh (poseable mesh), make sure you are in world space
+create a variable of type and name it AnimationBoneCorrectionRotationOffset, give it the following values
+![image](https://github.com/user-attachments/assets/6d541b8f-f558-4fbc-944e-58160c83b186)
+
+split struct pin on the output of get bone transform by name and two make transform functions
+then add compose transform and make sure the order is the same as in the picture
+add collision spheres at the bones loactions of the tracked hand to attach physics constains to
+and then attach them to the hand bones
+![image](https://github.com/user-attachments/assets/d879ab58-fa83-41bd-9138-bd7be3c51a97)
+
+Add, attach, and tie the physics constraints between the two hands
+make sure you enable manual attachment 
+![image](https://github.com/user-attachments/assets/8fc7f320-1a28-4ce3-9814-358e6e5062cd)
+
+set the following options for the physics constraint so it behaves more naturaly
+![image](https://github.com/user-attachments/assets/3e5dfcbf-5100-4653-98a6-e0ae44bd01fb)
+
+go back to the start of the loop and add after completed "set simulate physics" and enable it
+![image](https://github.com/user-attachments/assets/c2716780-6f0f-437a-9f0d-5ee09d77af78)
+
+the function to tie both tracked hand and physics hand is now complete
+Go back to the event graph and add the function add physics to times after the branch, drag from false
+![image](https://github.com/user-attachments/assets/c57ae462-9364-4caf-a31a-09eedd8d618c)
+
+pass the right parameters to the function as follows
+![image](https://github.com/user-attachments/assets/edea6fa3-9959-4969-81aa-74a2b3ed42e6)
+
+set the variable PhysicsSet high to indecate that the physics hands have been tied.
+![image](https://github.com/user-attachments/assets/2d699776-a72d-4aa1-9cf9-7a81f767f4c9)
+
+add an event lesner for the key H, that can call this part of the code on demand.
+![image](https://github.com/user-attachments/assets/b4eeb107-aa96-44a9-abf1-e00d1d47075a)
+
+connect it to the start of this part
+![image](https://github.com/user-attachments/assets/d6052b20-8cd3-4f1e-b142-3cb85e76c8c6)
+
+go back to the parts implemnted in the previos mentioned tutorial and disconnect the update hand visablity, so we only see the physics hands
+![image](https://github.com/user-attachments/assets/52e1d0f1-d815-4f9d-8b02-fd5a33e91476)
+
+replace the branching condition for both update hand animation to PhysicsSet, make the track hands meshes only move after we tie them to the physics hands.
+![image](https://github.com/user-attachments/assets/acf9e86c-d338-487f-9be0-2f829e80723f)
+
+
+
+
+
 
 
 
