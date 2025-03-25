@@ -7,8 +7,8 @@ ___
 https://github.com/SAthamnah/VRPhysicsBasedHands/blob/main/PhysicsBasedHands.md
 https://github.com/SAthamnah/VRPhysicsBasedHands/blob/main/VRTabletWithBlui.md
 
-
-
+[PhysicsBasedHands](./PhysicsBasedHands.md)
+[VRTabletWithBlui](./VRTabletWithBlui.md)
 
 
 
