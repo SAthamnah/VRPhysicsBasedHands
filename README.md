@@ -4,8 +4,6 @@ This is an example project to help you implement a physics based VR hands using 
 
 ___
 ## Preparation
-https://github.com/SAthamnah/VRPhysicsBasedHands/blob/main/PhysicsBasedHands.md
-https://github.com/SAthamnah/VRPhysicsBasedHands/blob/main/VRTabletWithBlui.md
 
 [PhysicsBasedHands](./PhysicsBasedHands.md)
 [VRTabletWithBlui](./VRTabletWithBlui.md)
