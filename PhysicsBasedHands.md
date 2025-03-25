@@ -249,3 +249,7 @@ go back to the parts implemnted in the previos mentioned tutorial and disconnect
 replace the branching condition for both update hand animation to PhysicsSet, make the track hands meshes only move after we tie them to the physics hands.
 
 ![image](https://github.com/user-attachments/assets/acf9e86c-d338-487f-9be0-2f829e80723f)
+
+___
+Go back to the main page
+[Home](./README.md)
