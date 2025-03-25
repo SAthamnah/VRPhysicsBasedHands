@@ -253,3 +253,7 @@ ___
 ### Final blueprint
 
 <img width="800" alt="image" src="https://github.com/user-attachments/assets/c4630b78-9db6-48c9-8376-75245e32f675" />
+
+___
+Go back to the main page
+[Home](./README.md)
