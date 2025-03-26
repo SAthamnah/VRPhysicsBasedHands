@@ -1,48 +1,48 @@
 # VRPhysicsBasedHands
 
-This is an example project to help you implement a physics based VR hands using OpenXR, we will use the built in handtraking in the vrajo XR3.
+This is an example project to help you implement a physics based VR hands using OpenXR, we will use the built in handtraking in the Varjo XR3.
 
 ___
 ## Preparation
 
-make sure that you have openXR turned on in the varjo base software.
+1. Make sure that you have openXR turned on in the varjo base software.
 
 <img width="300" alt="image" src="https://github.com/user-attachments/assets/378a791f-cecf-48e0-9d8b-b063beb60109" />
 
-add varjo openXR to unreal
+2. Add Varjo openXR to unreal
 
 https://www.fab.com/listings/aac38f51-491b-4b92-95bf-8ce04311a2ff
 
-go to the plugin menu and turn OpenXR, OpenXRHandTracking, and Varjo OpenXR on
+3. go to the plugin menu and turn OpenXR, OpenXRHandTracking, and Varjo OpenXR on
 
 <img width="700" alt="image" src="https://github.com/user-attachments/assets/86ecbf8a-395e-4056-81fb-006add27f679" />
 
 ___
 ## Procedural Virtual Hand Mesh Animation Using OpenXR tutorial
 
-follow this tutorial to get your hands in VR:
+Follow this tutorial to get your hands in VR:
 [Part1](https://www.youtube.com/watch?v=TPEA1GJr_kU)
 [Part2](https://www.youtube.com/watch?v=xEnuephuNmw)
 
 ___
 ## Physics asset
 
-you will notice that the hands you have after finishing the tutorial do not have physics
+You will notice that the hands you have after finishing the tutorial do not have physics
 so, we will be doing that 
 
-first step, right click on the XRHand model and create physics
+1. First step, right click on the XRHand model and create physics
 
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/f4d04b8b-5781-4a1b-96ed-afdbbe051bbf" />
 
-press create asset
+2. Press create asset
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/47b51305-d1c9-4235-91ed-d2914cd9d223" />)
 
-select the already created capsel and delete it
+3. Select the already created capsule and delete it.
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/1c7fa181-1422-43f1-a527-4a67354da494" />
 
-in the skeleton tree menu press on the steeting icon then show all bones
+4. In the skeleton tree menu press on the steeting icon then show all bones
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/d25aaf7e-e38e-4b95-b8f3-6f8485b49f0a" />
 
