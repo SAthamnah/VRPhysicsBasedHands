@@ -76,39 +76,39 @@ It could look like this:
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/cfcc5879-2784-4c18-b705-20f8104dd67b" />
 
-right click on the wrist capcel and press on add shap then box.
+9. Right click on the wrist capsule and press on add shap then box.
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/8aad26fd-7950-4107-823c-5465ca5ae1ef" />
 
-right click again on the capcel and delete it
-adgust the box size and location to best fit the hand shap
+10. Right click again on the capsule and delete it.
+11. Adjust the box size and location to best fit the hand shape.
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/6a337fd7-0a55-4737-8459-9261108bfe88" />
 
-save
+Save.
 
-now if you press simulate you will see something like this
+Now if you press simulate you will see something like this:
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/586ab5eb-26a9-47ec-8cfd-dd828d6330d2" />
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/c1157648-7a2d-4be3-be5c-1321bee39245" />
 
-go back to the skeleton tree menu and hide the bones
+12. Go back to the skeleton tree menu and hide the bones.
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/1ab1fb2f-1480-4a57-861f-bae55ed4ba5e" />
 
-right click in the skeleton tree and press select all constrains
+13. Right click in the skeleton tree and press select all constraints.
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/faae4e9a-2d7a-4888-b124-aef803b7bf9e" />
 
-scroll down in the details menu and turn on SLERP for both oriantation and velocity, modify the orientation stringth to 1500
+14. Scroll down in the details menu and turn on SLERP for both orientation and velocity, modify the orientation strength to 1500.
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/5aed3ae5-e284-493b-9cd8-ca03534065ce" />
 
-if you simulate now you will see something like this 
+If you simulate now you will see something like this:
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/70a5a14d-43c9-4086-9a9f-2ac8cc0cf977" />
 
-save
+Save.
 
 ___
 ## adding the Physics hands to your pawn
